@@ -1,0 +1,19 @@
+# DeepSeek Harness patch layer that attaches Agentboard's MCP server, so a dsh
+# agent can claim tasks, report progress, ask the operator, and write pages.
+# Export AGENTBOARD_URL and AGENTBOARD_TOKEN (an agent token from the Control
+# Room) before starting dsh, then from the repository root:
+#
+#   dsh web --patch "$PWD/agentboard/integrations/dsh.cordis.yml"
+- insert:
+    - id: mcp-agentboard
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: agentboard
+        transport: stdio
+        command: node
+        args:
+          - !!js process.cwd() + '/agentboard/src/mcp/server.js'
+        env:
+          AGENTBOARD_URL: !!js process.env.AGENTBOARD_URL ?? 'http://127.0.0.1:4317'
+          AGENTBOARD_TOKEN: !!js process.env.AGENTBOARD_TOKEN ?? ''
+        cwd: !!js process.cwd()

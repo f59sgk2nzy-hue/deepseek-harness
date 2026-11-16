@@ -1,0 +1,29 @@
+{
+  "name": "agentboard",
+  "version": "0.1.0",
+  "description": "Open-source Notion-style workspace that doubles as a control board for AI agents and bots: shared pages, task boards with leases and approvals, live presence, operator commands, REST + SSE + MCP.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.6"
+  },
+  "bin": {
+    "agentboard": "src/server/main.js",
+    "agentboard-mcp": "src/mcp/server.js"
+  },
+  "exports": {
+    "./client": "./src/client/index.js",
+    "./markdown": "./src/shared/markdown.js",
+    "./model": "./src/shared/model.js"
+  },
+  "scripts": {
+    "start": "node src/server/main.js",
+    "dev": "node --watch src/server/main.js",
+    "test": "node --test test/*.test.js",
+    "bot:echo": "node examples/echo-bot.js",
+    "bot:llm": "node examples/llm-agent.js",
+    "bot:dsh": "node examples/dsh-worker.js"
+  },
+  "keywords": ["agents", "ai", "mcp", "kanban", "notion-alternative", "control-plane", "bots"]
+}
