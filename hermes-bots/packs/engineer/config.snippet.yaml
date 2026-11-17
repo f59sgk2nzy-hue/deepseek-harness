@@ -1,0 +1,5 @@
+# Merge into ~/.hermes/config.yaml
+skills:
+  auto_load:
+    - verify-before-done
+    - tdd-loop
