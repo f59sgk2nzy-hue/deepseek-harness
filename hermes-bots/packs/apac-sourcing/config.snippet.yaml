@@ -1,0 +1,5 @@
+# Merge into ~/.hermes/config.yaml
+skills:
+  auto_load:
+    - sourcing-intake
+    - trade-compliance-screen

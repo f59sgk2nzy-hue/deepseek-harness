@@ -7,6 +7,7 @@ Copy-ready personas and skills for [Hermes Agent](https://hermes-agent.nousresea
 | `engineer` | Coding bot: verify-before-done, TDD loop, PR workflow |
 | `researcher` | Source-grounded research and decision briefs |
 | `operator` | Cautious ops/automation with approval and rollback discipline |
+| `apac-sourcing` | International sourcing analyst for Asia-Pacific vendors: intake, discovery, due diligence, trade-compliance screen, material equivalence, landed cost, RFQ drafts, scorecard, qualification plan. Advisory only: drafts, never contacts vendors |
 | `bot-creator` | Skill that generates new packs from a short brief |
 
 ## Install
