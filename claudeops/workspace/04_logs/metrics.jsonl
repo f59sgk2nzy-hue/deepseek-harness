@@ -1,0 +1,1 @@
+{"ts": "2026-11-18T23:35:24+00:00", "routine": "daily-brief", "agent": "chief-of-staff", "thread_id": 1, "exit_code": 0, "is_error": false, "duration_ms": 7602, "num_turns": 4, "total_cost_usd": 0.07750389999999999, "input_tokens": 6, "output_tokens": 523, "cache_read_input_tokens": 33499, "cache_creation_input_tokens": 17228, "session_id": "e8e8da1d-2b0b-4101-a778-9b04841bddb1"}

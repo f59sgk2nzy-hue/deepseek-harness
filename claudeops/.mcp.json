@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest", "--headless"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./workspace"]
+    }
+  },
+  "_placeholders": {
+    "_note": "Not loaded by Claude Code. To enable one, move it into mcpServers (and drop _comment).",
+    "desktop-commander": {
+      "_comment": "Local OS/GUI control. High privilege: local-automator gates it behind approvals. Review the package before enabling.",
+      "command": "npx",
+      "args": ["-y", "@wonderwhy-er/desktop-commander@latest"]
+    },
+    "openrouter-bridge": {
+      "_comment": "Optional external-model bridge for multi-model routing. Replace the package name; export OPENROUTER_API_KEY in your shell, never in this file.",
+      "command": "npx",
+      "args": ["-y", "<your-openrouter-mcp-package>"],
+      "env": { "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}" }
+    }
+  }
+}

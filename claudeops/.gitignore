@@ -1,0 +1,5 @@
+workspace/04_logs/state.db
+workspace/04_logs/state.db-*
+__pycache__/
+*.pyc
+.env
